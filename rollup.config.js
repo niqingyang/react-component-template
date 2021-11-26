@@ -26,6 +26,7 @@ export default [
         plugins: [
             // https://github.com/rollup/plugins/tree/master/packages/alias
             alias({
+                resolve: ['.jsx', '.js', '.tsx', '.ts'],
                 entries: [
                     // {
                     //     find: 'utils',
@@ -35,6 +36,7 @@ export default [
                     //     find: 'batman-1.0.0',
                     //     replacement: './joker-1.5.0'
                     // }
+                    {find: '@/', replacement: './src/'}
                 ]
             }),
             resolve(),
